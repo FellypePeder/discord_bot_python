@@ -26,19 +26,6 @@ async def hello(interaction: discord.Interaction):
 
 @bot.tree.command(name="roll", description="Roll a dice")
 @app_commands.describe(dice_type = "Dice type", times_to_roll = "Times to roll the dice", dice_modifier = "Dice modifier")
-# async def roll(interaction: discord.Interaction, dice_type: int, times_to_roll: int = 1, dice_modifier: int = 0):
-#     final_dice = ""
-#     soma = 0
-#     for i in range(times_to_roll):
-#         dice_roll = random.randint(1, dice_type)
-#         dice_result = dice_roll + dice_modifier
-#         if dice_modifier > 0:
-#             final_dice += f'{dice_result} = [**{dice_roll}**+{dice_modifier}]\n'
-#             soma += dice_result
-#         else:
-#             final_dice += f'{dice_result} = [**{dice_roll}**{dice_modifier}]\n'
-#             soma += dice_result
-#     await interaction.response.send_message(f'__{times_to_roll}d{dice_type}__\n{final_dice}\nSoma: {soma}')
 async def roll(interaction: discord.Interaction, dice_type: int, times_to_roll: int = 1, dice_modifier: int = 0):
     final_dice = ""
     soma = 0
